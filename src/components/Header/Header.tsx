@@ -1,4 +1,5 @@
-import React from 'react'
+import { IoSettingsOutline } from 'react-icons/io5'
+import { IoNotificationsOutline } from 'react-icons/io5'
 
 export default function Header() {
   return (
@@ -26,17 +27,18 @@ export default function Header() {
       </div>
 
       <div className='flex items-center justify-center gap-1.5 md:gap-3.5'>
-        <div className='bg-gray w-9 h-9 rounded-full flex items-center justify-center'>
-          <span className=''>☎</span>
+        <div className='bg-lightblack shadow-lg shadow-yellow-500/50 w-9 h-9 rounded-full flex items-center justify-center cursor-pointer'>
+          <IoSettingsOutline className='w-5 h-5' />
         </div>
 
-        <div className='bg-gray w-9 h-9 rounded-full flex items-center justify-center'>
-          <span className=''>✪</span>
+        <div className='relative bg-lightblack w-9 h-9 rounded-full flex items-center justify-center cursor-pointer'>
+          <IoNotificationsOutline className='w-5 h-5' />
+          <div className="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-green border-black border rounded-full -top-2 -right-2">2</div>
         </div>
 
-        <div className='bg-gray w-9 h-9 rounded-full flex items-center justify-center cursor-pointer'>
-          <span className=''>☻</span>
-        </div>
+        <button className='cursor-pointer'>
+          <img className="w-10 h-10 rounded-full" src="/images/avatar.svg" alt="Profile avatar"></img>
+        </button>
       </div>
     </header>
   )
