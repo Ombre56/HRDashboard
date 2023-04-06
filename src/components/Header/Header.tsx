@@ -1,32 +1,17 @@
-import { IoSettingsOutline, IoNotificationsOutline } from 'react-icons/io5'
-import { HiOutlineMenuAlt2 } from 'react-icons/hi'
-import { MdOutlineClose } from 'react-icons/md'
+import { IoSettingsOutline } from 'react-icons/io5'
+import { IoNotificationsOutline } from 'react-icons/io5'
 
-interface ChildProps {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export default function Header({ isOpen, setIsOpen }: ChildProps) {
+export default function Header() {
   return (
-    <div className='flex justify-center px-2.5 md:px-9 h-20 border-b border-line'>
+    <header className='flex justify-center px-2.5 md:px-9 h-20 border-b border-line'>
       <div className='w-16 md:w-60 items-center flex gap-2'>
-        <div className='hidden md:block'>
-          <img className="w-8 h-8" src="/images/headerIcon.svg" alt="Logo Icon"></img>
-        </div>
+        <div className='hidden md:block'>☆</div>
         <h1 className='text-sm md:text-2xl font-bold hidden md:block'>HRTool</h1>
 
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className={`${isOpen ? "hidden" : "block"}`}>
-            <HiOutlineMenuAlt2 className='w-10 h-10' />
-          </div>
-
-          <div className={`${isOpen ? "block" : "hidden"}`}>
-            <MdOutlineClose className='w-10 h-10' />
-          </div>
+        <button className="md:hidden space-y-2">
+          <span className="block w-8 h-0.5 bg-gray"></span>
+          <span className="block w-8 h-0.5 bg-gray"></span>
+          <span className="block w-5 h-0.5 bg-gray"></span>
         </button>
       </div>
 
@@ -55,6 +40,6 @@ export default function Header({ isOpen, setIsOpen }: ChildProps) {
           <img className="w-10 h-10 rounded-full" src="/images/avatar.svg" alt="Profile avatar"></img>
         </button>
       </div>
-    </div>
+    </header>
   )
 }
