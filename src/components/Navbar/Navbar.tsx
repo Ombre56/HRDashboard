@@ -14,7 +14,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
   return (
     <nav className='w-[277px] h-screen border-r border-line text-gray'>
       <ul className='pt-8 flex flex-col gap-4'>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
           <div
             className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
             onClick={() => setIsOpen(!isOpen)}
@@ -23,7 +23,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
             Dashboard
           </div>
         </li>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
           <div
             className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
             onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +32,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
             Messages
           </div>
         </li>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
           <div
             className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
             onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +46,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
       <figure className='py-9'>
         <figcaption className='uppercase pb-4 text-sm px-2.5 md:px-9'>Recruitment</figcaption>
           <ul className='flex flex-col gap-4 text-base pl-0.5'>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Jobs
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +64,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Candidates
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -79,7 +79,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
       <figure>
         <figcaption className='uppercase pb-4 text-sm px-2.5 md:px-9'>Organization</figcaption>
           <ul className='flex flex-col gap-4 text-base pl-0.5'>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -88,7 +88,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Employees
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +97,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Documents
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all duration-300 cursor-pointer mr-7 rounded-r-full'>
+            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
