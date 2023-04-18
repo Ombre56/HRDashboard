@@ -7,11 +7,11 @@ function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
-      <header>
+      <header className='sticky top-0 z-50'>
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </header>
 
-      <main className='flex'>
+      <main className='relative flex'>
         <div>
           <div className='hidden md:block'>
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
