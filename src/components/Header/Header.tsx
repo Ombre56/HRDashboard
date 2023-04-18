@@ -55,6 +55,6 @@ export default function Header({ isOpen, setIsOpen }: ChildProps) {
           <img className="w-10 h-10 rounded-full" src="/images/avatar.svg" alt="Profile avatar"></img>
         </button>
       </div>
-    </div>
+    </header>
   )
 }
