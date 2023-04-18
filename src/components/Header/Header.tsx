@@ -3,7 +3,7 @@ import { IoNotificationsOutline } from 'react-icons/io5'
 
 export default function Header() {
   return (
-    <header className='fixed flex justify-center px-2.5 md:px-9 h-20 border-b border-line bg-black z-20'>
+    <header className='flex justify-center px-2.5 md:px-9 h-20 border-b border-line bg-black'>
       <div className='w-16 md:w-60 items-center flex gap-2'>
         <div className='hidden md:block'>☆</div>
         <h1 className='text-sm md:text-2xl font-bold hidden md:block'>HRTool</h1>
