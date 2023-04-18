@@ -12,7 +12,7 @@ interface ChildProps {
 
 export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
   return (
-    <nav className='w-[277px] h-screen border-r border-line text-gray bg-black fixed'>
+    <nav className='w-[277px] h-screen border-r border-line text-gray bg-black fixed md:static'>
       <ul className='pt-8 flex flex-col gap-4'>
         <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
           <div
