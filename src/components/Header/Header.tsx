@@ -9,7 +9,7 @@ interface ChildProps {
 
 export default function Header({ isOpen, setIsOpen }: ChildProps) {
   return (
-    <header className='fixed flex justify-center px-2.5 md:px-9 h-20 border-b border-line bg-black'>
+    <header className='fixed flex justify-center px-2.5 md:px-9 h-20 border-b border-line bg-black z-20'>
       <div className='w-16 md:w-60 items-center flex gap-2'>
         <div className='hidden md:block'>
           <img className="w-8 h-8" src="/images/headerIcon.svg" alt="Logo Icon"></img>
