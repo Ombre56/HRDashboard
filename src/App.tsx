@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import JobAds from './components/JobAds/JobAds';
+import Candidates from './components/Candidates/Candidates';
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -24,6 +25,7 @@ function App() {
 
         <section className='w-full pt-8 pl-8'>
           <JobAds />
+          <Candidates />
         </section>
       </main>
     </>
