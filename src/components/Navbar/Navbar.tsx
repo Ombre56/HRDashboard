@@ -4,6 +4,7 @@ import { IoCalendar } from 'react-icons/io5'
 import { BsBriefcaseFill } from 'react-icons/bs'
 import { HiUsers, HiUser, HiDocumentText } from 'react-icons/hi'
 import { CgWebsite } from 'react-icons/cg'
+import { NavLink } from 'react-router-dom';
 
 interface ChildProps {
   isOpen: boolean;
@@ -11,42 +12,53 @@ interface ChildProps {
 }
 
 export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
+  const hoverClass = 'bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full';
+
   return (
     <nav className='w-[277px] h-screen border-r border-line text-gray bg-black fixed md:static'>
       <ul className='pt-8 flex flex-col gap-4'>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
-          <div
-            className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <RxDashboard className='w-5 h-5' />
-            Dashboard
-          </div>
-        </li>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
-          <div
-            className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <TbMessage className='w-5 h-5' />
-            Messages
-          </div>
-        </li>
-        <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
-          <div
-            className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <IoCalendar className='w-5 h-5' />
-            Calendar
-          </div>
-        </li>
+        <NavLink to='/' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+          <li className={hoverClass}>
+            <div
+              className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
+              onClick={() => setIsOpen(!isOpen)}
+              >
+              <RxDashboard className='w-5 h-5' />
+              Dashboard
+            </div>
+          </li>
+        </NavLink>
+
+        <NavLink to='/messages' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+          <li className={hoverClass}>
+            <div
+              className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <TbMessage className='w-5 h-5' />
+              Messages
+            </div>
+          </li>
+        </NavLink>
+
+        <NavLink to='/calendar' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+          <li className={hoverClass}>
+            <div
+              className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <IoCalendar className='w-5 h-5' />
+              Calendar
+            </div>
+          </li>
+        </NavLink>
       </ul>
 
       <figure className='py-9'>
         <figcaption className='uppercase pb-4 text-sm px-2.5 md:px-9'>Recruitment</figcaption>
-          <ul className='flex flex-col gap-4 text-base pl-0.5'>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+        <ul className='flex flex-col gap-4 text-base pl-0.5'>
+          <NavLink to='/jobs' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +67,10 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Jobs
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+          </NavLink>
+
+          <NavLink to='/candidates' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +79,10 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Candidates
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+          </NavLink>
+
+          <NavLink to='/career' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -73,13 +91,15 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Career Site
               </div>
             </li>
+          </NavLink>
           </ul>
       </figure>
 
       <figure>
         <figcaption className='uppercase pb-4 text-sm px-2.5 md:px-9'>Organization</figcaption>
-          <ul className='flex flex-col gap-4 text-base pl-0.5'>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+        <ul className='flex flex-col gap-4 text-base pl-0.5'>
+          <NavLink to='/employess' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -88,7 +108,10 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Employees
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+          </NavLink>
+
+          <NavLink to='/documents' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +120,10 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Documents
               </div>
             </li>
-            <li className='bg-gradient-to-r hover:from-gradient-1 hover:to-gradient-2 hover:text-white transition-all ease-in-out duration-500 cursor-pointer mr-7 rounded-r-full'>
+          </NavLink>
+
+          <NavLink to='/reports' className={({isActive}) => isActive ? 'bg-gradient-to-r from-gradient-1 to-gradient-2 text-white mr-7 rounded-r-full' : undefined}>
+            <li className={hoverClass}>
               <div
                 className='flex items-center gap-2.5 px-2.5 md:px-9 h-10'
                 onClick={() => setIsOpen(!isOpen)}
@@ -106,6 +132,7 @@ export default function Navbar({ isOpen, setIsOpen }: ChildProps) {
                 Reports
               </div>
             </li>
+          </NavLink>
           </ul>
       </figure>
     </nav>
